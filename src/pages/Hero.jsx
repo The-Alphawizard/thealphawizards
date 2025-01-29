@@ -69,7 +69,7 @@ const Hero = () => {
         </motion.div>
 
         {/* Main Content */}
-        <div className="flex flex-col items-center justify-between h-[calc(100vh-230px)] py-8">
+        <div className="flex flex-col items-center justify-between h-auto py-8">
           {/* Hero Text */}
           <motion.div 
             initial={{ y: 30, opacity: 0 }}
