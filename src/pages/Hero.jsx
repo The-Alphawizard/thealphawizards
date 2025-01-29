@@ -6,6 +6,7 @@ import { FaAngleDown } from "react-icons/fa6";
 
 import bgImg from "../images/background/bg1.jpg";
 import wolfImg from "../images/pngs/wolf.png";
+import logoImg from "../images/logo/Logo AW.png"
 import laptopImg from "../images/others/laptop1.png";
 
 const Hero = () => {
@@ -43,7 +44,7 @@ const Hero = () => {
             <motion.img 
               whileHover={{ rotate: 180 }}
               transition={{ duration: 0.4 }}
-              src={wolfImg} 
+              src={logoImg} 
               alt="wolf logo" 
               className="w-8 md:w-12" 
             />

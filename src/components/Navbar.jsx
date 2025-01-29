@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import wolfImg from "../images/pngs/wolf.png";
+import logoImg from "../images/logo/Logo AW.png"
+
 import { 
   GiMagicGate, 
   GiMagicPalm, 
@@ -79,7 +81,7 @@ const Navbar = () => {
       {/* Logo Area */}
       <div className="flex items-center justify-between w-full md:w-auto bg-black/90 px-4 py-2 md:bg-transparent">
         <div className="flex items-center gap-2 md:gap-3">
-          <img src={wolfImg} alt="wolf logo" className="w-6 sm:w-7 md:w-5 lg:w-8" />
+          <img src={logoImg} alt="wolf logo" className="w-6 sm:w-7 md:w-5 lg:w-8" />
           <div className="flex flex-col items-start">
             <h1 className="text-xs sm:text-sm md:text-1xl lg:text-xl font-extrabold text-[#A100FF]">The</h1>
             <h1 className="text-xs sm:text-sm md:text-1xl lg:text-xl font-extrabold text-white">ALPHAWIZARDS</h1>
