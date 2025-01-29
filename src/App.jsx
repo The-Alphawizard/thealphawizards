@@ -9,6 +9,7 @@ import Project from './pages/Project'
 import Comments from "./pages/Comments";
 import ContactUs from "./pages/ContactUs";
 import Footer from './pages/Footer'
+import HeaderNavArrow from './pages/HeaderNavArrow'
 
 
 
@@ -17,6 +18,8 @@ const App = () => {
     <div className="relative min-h-screen overflow-x-hidden">
       <Background />
       <Navbar />
+      
+      <HeaderNavArrow/>
       <div className="flex flex-col gap-16">
         <section id="hero" className="min-h-screen">
           <Hero />
