@@ -114,7 +114,7 @@ const Hero = () => {
 
             {/* Laptop Image area  */}
 
-            <div className="xl:w-full lg:w-[60%] md:w-[50%] w-[40%]   flex justify-center items-center xl:mt-0 lg:mt-1 md:mt-10 mt-20 ">
+            <div className="xl:w-full lg:w-[50%] lg:m-auto flex justify-center items-center xl:mt-0 lg:mt-1 md:mt-10 mt-20 ">
               <div className="w-[900px] ">
                 <img src={laptopImg} alt="laptop" />
               </div>
@@ -167,7 +167,7 @@ const Hero = () => {
             </div>
 
             {/* Balls Area */}
-            <Balls
+            {/* <Balls
               imageSrc={javaImg}
               index={-1000}
               width={293}
@@ -191,7 +191,7 @@ const Hero = () => {
             index={-1000}
             width={293}
             position={{ top: "110px", left: "1690px" }}
-          />
+          /> */}
 
             {/* RED container End is here */}
           </div>
