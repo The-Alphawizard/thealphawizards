@@ -3,7 +3,7 @@ import React from "react";
 const Balls = ({ imageSrc, index, width = 100, position = {} }) => {
   return (
     <div
-      className={`flex items-center justify-center rounded-full absolute opacity-75 floating-ball sm:z-[-50] md:hidden  lg:hidden xl:block`} // Add hidden lg:block xl:block to control visibility
+      className={`flex items-center justify-center rounded-full absolute opacity-75 floating-ball hidden sm:hidden md:hidden xl:block`} // Add hidden lg:block xl:block to control visibility
       style={{
         background: "linear-gradient(to bottom, #6441A5 0%, #1a0433 100%)",
         boxShadow:
@@ -18,7 +18,7 @@ const Balls = ({ imageSrc, index, width = 100, position = {} }) => {
         <img
           src={imageSrc}
           alt={`Ball ${index}`}
-          className="max-w-[80%] max-h-[80%] object-contain"
+          className="absolute inset-0 m-auto max-w-[80%] max-h-[80%] object-contain "
         />
       )}
       <style jsx>{`
