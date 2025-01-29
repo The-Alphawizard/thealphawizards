@@ -1,13 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
 import { FaGithub, FaLinkedinIn, FaGlobe } from "react-icons/fa";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import backIMg from "../images/background/withCir.png";
-import Balls from "../components/Balls";
+// import Balls from "../components/Balls"
 
-// members images
+// Import team member images
 import dilshanImg from "../images/team/dilshan.jpg";
 import weroshIMg from "../images/team/werosh.jpg";
 import umayangaImg from "../images/team/mall.jpg";
@@ -17,7 +15,16 @@ import sankalpaImg from "../images/team/sankalpa.jpg";
 import rumethImg from "../images/team/rumeth.jpg";
 import jinithaImg from "../images/team/jinitha.jpg";
 
-// Modal Component
+// Loading Animation Component
+const LoadingSpinner = () => (
+  <motion.div 
+    className="w-16 h-16 border-4 border-purple-200 border-t-purple-600 rounded-full"
+    animate={{ rotate: 360 }}
+    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+  />
+);
+
+// Modal Component with enhanced animations
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
@@ -27,25 +34,31 @@ const Modal = ({ isOpen, onClose, children }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-120 sm:inset-60 md:inset-10 lg:inset-20 xl:inset-0 lg:top-120 md:top-100 xl:top-100 flex items-center justify-center z-[9999]"
+        className="fixed inset-0 flex items-center justify-center z-[9999] px-4"
       >
-        <div
-          className="fixed inset-0 bg-black/60 backdrop-blur-md"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm"
           onClick={onClose}
         />
 
         <motion.div
-          initial={{ scale: 0.9 }}
-          animate={{ scale: 1 }}
-          exit={{ scale: 0.9 }}
-          className="relative bg-gradient-to-br from-black to-black text-white rounded-lg shadow-lg w-11/12 max-w-lg p-6"
+          initial={{ scale: 0.9, y: 20, opacity: 0 }}
+          animate={{ scale: 1, y: 0, opacity: 1 }}
+          exit={{ scale: 0.9, y: 20, opacity: 0 }}
+          transition={{ type: "spring", damping: 25, stiffness: 200 }}
+          className="relative bg-gradient-to-br from-black via-purple-900/50 to-black text-white rounded-2xl shadow-2xl w-full max-w-2xl p-8 overflow-y-auto max-h-[90vh]"
         >
-          <button
+          <motion.button
+            whileHover={{ scale: 1.1, rotate: 90 }}
+            whileTap={{ scale: 0.9 }}
             onClick={onClose}
             className="absolute top-4 right-4 p-1 rounded-full hover:bg-purple-800/50 transition-colors"
           >
             <IoMdCloseCircleOutline className="w-6 h-6" />
-          </button>
+          </motion.button>
           {children}
         </motion.div>
       </motion.div>
@@ -59,12 +72,12 @@ const TeamMember = ({ member, onViewMore }) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -5 }}
+      whileHover={{ y: -5, scale: 1.02 }}
       transition={{ duration: 0.3 }}
-      className="flex-shrink-0 w-72 p-6 bg-gradient-to-br from-black to-purple-900 rounded-[50px] shadow-xl mx-4 border-2 border-[#3c2463]"
+      className="bg-gradient-to-br from-black to-purple-900 rounded-3xl shadow-xl border-2 border-[#3c2463] overflow-hidden"
     >
-      <div className="flex flex-col items-center space-y-4">
-        <div className="w-32 h-32 rounded-full overflow-hidden ring-4 ring-[#A100FF]">
+      <div className="p-6 flex flex-col items-center space-y-4">
+        <div className="w-24 h-24 rounded-full overflow-hidden ring-4 ring-[#A100FF]">
           <img
             src={member.image}
             alt={member.name}
@@ -76,38 +89,43 @@ const TeamMember = ({ member, onViewMore }) => {
         <p className="text-purple-300 text-sm">{member.role}</p>
 
         <div className="flex space-x-4 text-purple-200">
-          <a
-          title="GitHub"
-          target="_blank"
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            title="GitHub"
+            target="_blank"
             href={member.github}
             className="hover:text-white transition-colors"
           >
             <FaGithub className="w-5 h-5" />
-          </a>
-          <a
-          title="LinkedIn"
-          target="_blank"
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            title="LinkedIn"
+            target="_blank"
             href={member.linkedin}
             className="hover:text-white transition-colors"
           >
             <FaLinkedinIn className="w-5 h-5" />
-          </a>
-          <a
-          title="Portfolio"
-          target="_blank"
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            title="Portfolio"
+            target="_blank"
             href={member.portfolio}
             className="hover:text-white transition-colors"
           >
             <FaGlobe className="w-5 h-5" />
-          </a>
+          </motion.a>
         </div>
 
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => onViewMore(member)}
-          className="bg-[#a200ff] hover:bg-[hsl(278,100%,30%)] text-white px-6 py-2 rounded-[5px] transition-colors shadow-lg cursor-pointer hidden xl:block lg:block md:block "
+          className="bg-[#a200ff] hover:bg-[hsl(278,100%,30%)] text-white px-6 py-2 rounded-lg transition-colors shadow-lg cursor-pointer"
         >
           View More
-        </button>
+        </motion.button>
       </div>
     </motion.div>
   );
@@ -115,7 +133,7 @@ const TeamMember = ({ member, onViewMore }) => {
 
 const OurTeam = () => {
   const [selectedMember, setSelectedMember] = useState(null);
-  const scrollContainerRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const teamMembers = [
     //dilshan
@@ -210,95 +228,64 @@ const OurTeam = () => {
 
   ];
 
-  const scroll = (direction) => {
-    const container = scrollContainerRef.current;
-    if (container) {
-      const scrollAmount = direction === "left" ? -300 : 300;
-      container.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const backgroundVariants = {
-    hidden: { scale: 1.1, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        ease: "easeOut",
-      },
-    },
+  const handleViewMore = (member) => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setSelectedMember(member);
+      setIsLoading(false);
+    }, 800);
   };
 
   return (
-    <div className="relative">
+    <div 
+    id="team" className="relative min-h-screen p-8 ">
       <motion.div
         initial="hidden"
         animate="visible"
-        variants={backgroundVariants}
-        className={`absolute h-[calc(100vh-4rem)] w-[calc(100vw-4rem)] flex justify-center items-center bg-blue-950 rounded-[50px] -z-10 ${
-          selectedMember ? "blur-sm" : ""
-        }`}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 }
+        }}
+        className="absolute inset-0 -z-10"
         style={{
           backgroundImage: `url(${backIMg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-      >
-        <div className="max-w-7xl mx-auto xl:w-[1500px]  w-[500px] sm:w-[300px] md:w-[650px] lg:w-[850px]">
-          <motion.h1
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-4xl sm:text-5xl xl:text-8xl font-bold text-white text-center mb-12 "
-          >
-            Our Team
-          </motion.h1>
-          <Balls
-            imageSrc={""}
-            index={-100}
-            width={593}
-            position={{ top: "50px", left: "640px" }}
-          />
+      />
 
-          <div className="relative">
-            <button
-              onClick={() => scroll("left")}
-              className="absolute left-[-70px] top-1/2 -translate-y-1/2 z-10 flex items-center space-x-2 group"
-            >
-              <IoIosArrowBack className="w-30 h-50 text-purple-500 opacity-70 group-hover:opacity-100 transition- cursor-pointer" />
-            </button>
+      <div className="max-w-7xl mx-auto mt-20">
+        <motion.h1
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="text-4xl sm:text-5xl xl:text-7xl font-bold text-white text-center mb-10"
+        >
+          Our Team
+        </motion.h1>
 
-            <div
-              ref={scrollContainerRef}
-              className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory py-8 px-4"
-              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-            >
-              {teamMembers.map((member, index) => (
-                <TeamMember
-                  key={index}
-                  member={member}
-                  onViewMore={setSelectedMember}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={() => scroll("right")}
-              className="absolute right-[-100px] top-1/2 -translate-y-1/2 z-10 flex items-center space-x-2 group"
-            >
-              <IoIosArrowForward className="w-30 h-50 text-purple-500 opacity-70 group-hover:opacity-100 transition-opacity cursor-pointer" />
-            </button>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-5">
+          {teamMembers.map((member, index) => (
+            <TeamMember
+              key={index}
+              member={member}
+              onViewMore={handleViewMore}
+            />
+          ))}
         </div>
-      </motion.div>
+      </div>
 
-      <Modal isOpen={!!selectedMember} onClose={() => setSelectedMember(null)}>
-        {selectedMember && (
-          <div className="flex flex-col items-center space-y-6">
+      <Modal isOpen={!!selectedMember || isLoading} onClose={() => setSelectedMember(null)}>
+        {isLoading ? (
+          <div className="flex justify-center items-center h-64">
+            <LoadingSpinner />
+          </div>
+        ) : selectedMember && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex flex-col items-center space-y-6"
+          >
             <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-[#A100FF]">
               <img
                 src={selectedMember.image}
@@ -308,16 +295,14 @@ const OurTeam = () => {
             </div>
             <div className="text-center">
               <h2 className="text-2xl font-bold">{selectedMember.name}</h2>
-              <p className="text-purple-200 font-medium">
-                {selectedMember.title}
-              </p>
+              <p className="text-purple-200 font-medium">{selectedMember.title}</p>
               <p className="text-purple-300">{selectedMember.role}</p>
-              <p className="mt-4 text-gray-200 leading-relaxed">
-                {selectedMember.bio}
-              </p>
+              <p className="mt-4 text-gray-200 leading-relaxed">{selectedMember.bio}</p>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 href={selectedMember.github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -325,8 +310,10 @@ const OurTeam = () => {
               >
                 <FaGithub className="text-lg" />
                 GitHub
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 href={selectedMember.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -334,8 +321,10 @@ const OurTeam = () => {
               >
                 <FaLinkedinIn className="text-lg" />
                 LinkedIn
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 href={selectedMember.portfolio}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -343,9 +332,9 @@ const OurTeam = () => {
               >
                 <FaGlobe className="text-lg" />
                 Portfolio
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
         )}
       </Modal>
     </div>
