@@ -115,7 +115,7 @@ const Hero = () => {
             {/* Laptop Image area  */}
 
             <div className="xl:w-[75%] lg:w-[100%] lg:m-auto md:w-[50%] md:m-auto w-[80%] m-auto flex justify-center items-center xl:mt-0 lg:mt-1 md:mt-10 mt-20 ">
-              <div className=" w-[400px] xl:w-[900px] lg:w-[600px] md:w-[500px] sm:w-[400px] h-[500px] relative">
+              <div className=" w-[400px] xl:w-[900px] lg:w-[600px] md:w-[500px] sm:w-[400px]  relative">
                 <img src={laptopImg} alt="laptop" />
               </div>
             </div>
@@ -151,7 +151,8 @@ const Hero = () => {
             </div>
 
             {/* Description about Project */}
-            <div className="absolute inset-x-0 bottom-15 flex items-center lg:bottom-15  lg:left-75 lg:right-auto  z-150 xl:left-[140px] xl:bottom-[130px] md:left-[155px] md:bottom-[50px]">
+            
+            {/* <div className="absolute inset-x-0 bottom-15 flex items-center lg:bottom-15  lg:left-75 lg:right-auto  z-150 xl:left-[140px] xl:bottom-[130px] md:left-[155px] md:bottom-[50px]">
               <div className="w-full max-w-md bg-gradient-to-r from-purple-900/80 to-black/50 p-6 rounded-xl text-white flex gap-4">
                 <img
                   src={starImg}
@@ -164,7 +165,7 @@ const Hero = () => {
                   nostrum laboriosam numquam.
                 </p>
               </div>
-            </div>
+            </div> */}
 
             {/* Balls Area */}
             {/* <Balls
