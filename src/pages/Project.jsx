@@ -58,17 +58,17 @@ const Project = () => {
 
   return (
     <div id="projects" className="relative w-full p-8">
-  <motion.div
+  {/* <motion.div
     initial="hidden"
     animate="visible"
     variants={backgroundVariants}
-    className="absolute inset-0 bg-blue-950 rounded-[50px] -z-10"
+    className="absolute inset-0  rounded-[50px] -z-10"
     style={{
-      backgroundImage: `url(${backIMg})`,
+      backgroundImage: `url("")`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}
-  />
+  /> */}
 
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center">
         <motion.div
@@ -80,7 +80,7 @@ const Project = () => {
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">
             Our Projects
           </h1>
-          <p className="text-xl text-gray-300">
+          <p className="text-2xl text-gray-300">
             Discover some of the amazing projects we've worked on.
           </p>
         </motion.div>
@@ -95,7 +95,7 @@ const Project = () => {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className="bg-[#1a0f2e] rounded-3xl p-6 overflow-hidden group hover:shadow-xl transition-shadow duration-300"
+              className="bg-[#1a0f2e] rounded-3xl p-6 overflow-hidden group hover:shadow-xl transition-shadow duration-300 "
             >
               <div className="relative mb-6 overflow-hidden rounded-xl">
                 <img

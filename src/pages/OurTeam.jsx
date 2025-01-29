@@ -239,7 +239,7 @@ const OurTeam = () => {
   return (
     <div 
     id="team" className="relative min-h-screen p-8 ">
-      <motion.div
+      {/* <motion.div
         initial="hidden"
         animate="visible"
         variants={{
@@ -252,7 +252,7 @@ const OurTeam = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-      />
+      /> */}
 
       <div className="max-w-7xl mx-auto mt-20">
         <motion.h1

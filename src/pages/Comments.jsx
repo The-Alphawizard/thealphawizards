@@ -41,7 +41,7 @@ const Comments = () => {
       id="comments"
       className="relative w-full py-16 px-6 text-white text-center"
     >
-      <motion.div
+      {/* <motion.div
         initial="hidden"
         animate="visible"
         variants={backgroundVariants}
@@ -51,7 +51,7 @@ const Comments = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-      />
+      /> */}
       <div className="z-10">
         <h2 className="text-4xl font-bold mb-5 mt-20">What Our Clients Say</h2>
         <p className="text-lg mb-8">Hear from some of our satisfied clients.</p>
@@ -95,14 +95,6 @@ const Comments = () => {
                 </div>
               </div>
 
-              {/* <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="w-16 h-16 rounded-full mb-4 border-2 border-purple-500"
-              />
-              <h3 className="text-xl font-semibold">{testimonial.name}</h3>
-              <p className="text-sm text-purple-400">{testimonial.title}</p>
-              <p className="mt-4 italic text-gray-300">“{testimonial.quote}”</p> */}
             </div>
           ))}
         </div>

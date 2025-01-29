@@ -52,9 +52,9 @@ const TechStack = () => {
         initial="hidden"
         animate="visible"
         variants={backgroundVariants}
-        className="absolute h-[calc(100vh-4rem)] w-[calc(100vw-4rem)] flex justify-center items-center bg-blue-950 rounded-[50px] -z-10"
+        className="absolute h-[calc(100vh-4rem)] w-[calc(100vw-4rem)] flex justify-center items-center  rounded-[50px] -z-10"
         style={{
-          backgroundImage: `url(${backIMg})`,
+          backgroundImage: `url("")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -67,7 +67,7 @@ const TechStack = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 mt-15 sm:text-4xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:text-4xl">
             Technology Stack
           </h1>
           <p className="text-xl text-gray-300">

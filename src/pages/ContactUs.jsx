@@ -38,7 +38,7 @@ const ContactUs = () => {
 
   return (
     <div id="contact" className="relative w-full py-16 flex flex-col justify-center items-center">
-  <motion.div
+  {/* <motion.div
     initial="hidden"
     animate="visible"
     variants={backgroundVariants}
@@ -49,7 +49,7 @@ const ContactUs = () => {
       backgroundPosition: "center",
     }}
   />
-      
+       */}
       <motion.div
         initial="hidden"
         animate="visible"

@@ -44,7 +44,7 @@ const Hero = () => {
       <div
         className="flex justify-center items-center h-[calc(100vh-3rem)]  w-[calc(100vw-4rem)] rounded-bl-[70px] rounded-br-[70px] z-10"
         style={{
-          backgroundImage: `url(${bgImg})`,
+          backgroundImage: `url("")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
