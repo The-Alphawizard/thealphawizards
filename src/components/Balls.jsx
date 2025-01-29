@@ -3,8 +3,8 @@ import React from "react";
 const Balls = ({ imageSrc, index, width = 100, position = {} }) => {
   return (
     <div
-      className={`flex items-center justify-center rounded-full absolute opacity-75 floating-ball hidden sm:hidden md:hidden xl:block`} // Add hidden lg:block xl:block to control visibility
-      style={{
+    className={`flex items-center justify-center rounded-full absolute opacity-75 floating-ball hidden lg:block xl:block`}
+    style={{
         background: "linear-gradient(to bottom, #6441A5 0%, #1a0433 100%)",
         boxShadow:
           "0px 4px 24px rgba(159, 15, 203, 0.5), 0px 2px 12px rgba(159, 15, 203, 0.3)",

@@ -114,7 +114,7 @@ const Hero = () => {
 
             {/* Laptop Image area  */}
 
-            <div className="w-full   flex justify-center items-center xl:mt-0 lg:mt-1 md:mt-10 mt-20 ">
+            <div className="xl:w-full lg:w-[60%] md:w-[50%] w-[40%]   flex justify-center items-center xl:mt-0 lg:mt-1 md:mt-10 mt-20 ">
               <div className="w-[900px] ">
                 <img src={laptopImg} alt="laptop" />
               </div>
@@ -176,19 +176,19 @@ const Hero = () => {
 
             <Balls
               imageSrc={javasImg}
-              index={-100}
+              index={-1000}
               width={209}
               position={{ top: "610px", left: "1550px" }}
             />
             <Balls
             imageSrc={reactImg}
-            index={-100}
+            index={-1000}
             width={175}
             position={{ top: "480px", left: "290px" }}
           />
           <Balls
             imageSrc={tagImg}
-            index={-100}
+            index={-1000}
             width={293}
             position={{ top: "110px", left: "1690px" }}
           />
