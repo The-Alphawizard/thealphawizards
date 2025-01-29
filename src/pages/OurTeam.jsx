@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaLinkedinIn, FaGlobe } from "react-icons/fa";
 import { IoMdCloseCircleOutline } from "react-icons/io";
-import backIMg from "../images/background/withCir.png";
+// import backIMg from "../images/background/withCir.png";
 // import Balls from "../components/Balls"
 
 // Import team member images
@@ -57,7 +57,7 @@ const Modal = ({ isOpen, onClose, children }) => {
             onClick={onClose}
             className="absolute top-4 right-4 p-1 rounded-full hover:bg-purple-800/50 transition-colors"
           >
-            <IoMdCloseCircleOutline className="w-6 h-6" />
+            <IoMdCloseCircleOutline className="w-6 h-6 cursor-pointer" />
           </motion.button>
           {children}
         </motion.div>
@@ -286,7 +286,7 @@ const OurTeam = () => {
             animate={{ opacity: 1, y: 0 }}
             className="flex flex-col items-center space-y-6"
           >
-            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-[#A100FF]">
+            <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden ring-4 ring-[#A100FF]">
               <img
                 src={selectedMember.image}
                 alt={selectedMember.name}

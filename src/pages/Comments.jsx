@@ -10,27 +10,45 @@ const backgroundVariants = {
 
 const testimonials = [
   {
-    name: "John Doe",
-    title: "CEO of Company A",
-    image: "https://via.placeholder.com/50", // Replace with actual image URL
+    name: "Dhivya Suryadevara",
+    title: "Barra Broadens Diversity",
+    image:
+      "https://www.inclusiontimes.com/content/images/2020/08/GMDhivyaSuryadevara05-Mar-2016.jpg", // Replace with actual image URL
     quote: "This is the best service I have ever used. Highly recommend!",
   },
   {
-    name: "John Doe",
-    title: "CEO of Company A",
-    image: "https://via.placeholder.com/50",
+    name: "Leena Nair",
+    title: "Luxury Brand Chanel",
+    image:
+      "https://indianbusinesstimes.com/wp-content/uploads/2021/12/1639653960_whatsapp-image-2021-12-16-at-16-28-30.jpeg",
     quote: "This is the best service I have ever used. Highly recommend!",
   },
   {
-    name: "John Doe",
-    title: "CEO of Company A",
-    image: "https://via.placeholder.com/50",
+    name: "Amy Golding",
+    title: "Consultancy Opus",
+    image:
+      "https://elitebusinessmagazine.co.uk/wp-content/uploads/2022/09/AmyGolding-1.webp",
     quote: "This is the best service I have ever used. Highly recommend!",
   },
   {
-    name: "John Doe",
-    title: "CEO of Company A",
-    image: "https://via.placeholder.com/50",
+    name: "Leena Nair",
+    title: "Luxury Brand Chanel",
+    image:
+      "https://indianbusinesstimes.com/wp-content/uploads/2021/12/1639653960_whatsapp-image-2021-12-16-at-16-28-30.jpeg",
+    quote: "This is the best service I have ever used. Highly recommend!",
+  },
+  {
+    name: "Amy Golding",
+    title: "Consultancy Opus",
+    image:
+      "https://elitebusinessmagazine.co.uk/wp-content/uploads/2022/09/AmyGolding-1.webp",
+    quote: "This is the best service I have ever used. Highly recommend!",
+  },
+  {
+    name: "Dhivya Suryadevara",
+    title: "Barra Broadens Diversity",
+    image:
+      "https://www.inclusiontimes.com/content/images/2020/08/GMDhivyaSuryadevara05-Mar-2016.jpg", // Replace with actual image URL
     quote: "This is the best service I have ever used. Highly recommend!",
   },
 ];
@@ -68,7 +86,7 @@ const Comments = () => {
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
-                        className="w-20 h-20 rounded-full mb-4 border-2 border-purple-500"
+                        className="w-25 h-25 rounded-full mb-4 border-2 border-purple-500 object-cover"
                       />
                     </div>
                     <div>
@@ -94,7 +112,6 @@ const Comments = () => {
                   </p>
                 </div>
               </div>
-
             </div>
           ))}
         </div>

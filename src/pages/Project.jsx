@@ -6,26 +6,26 @@ const Project = () => {
   const projects = [
     {
       id: 1,
-      title: "Project One",
+      title: "Project 1",
       description:
         "This is a brief description of Project One. It demonstrates our innovative approach to problem-solving.",
-      image: "/api/placeholder/600/400",
+      image: "https://cdn.wedevs.com/uploads/2021/04/Best-project-management-software-for-web-designers-1024x559.png",
       link: "#",
     },
     {
       id: 2,
-      title: "Project One",
+      title: "Project 2",
       description:
         "This is a brief description of Project One. It demonstrates our innovative approach to problem-solving.",
-      image: "/api/placeholder/600/400",
+      image: "https://www.rpsgroup.com/media/4kcdsof3/hero-mpaction1.jpg?width=800&height=800&quality=100&rmode=min",
       link: "#",
     },
     {
       id: 3,
-      title: "Project One",
+      title: "Project 3",
       description:
         "This is a brief description of Project One. It demonstrates our innovative approach to problem-solving.",
-      image: "/api/placeholder/600/400",
+      image: "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/6uswRMxSOJodU9YC78ogzY/00b2b36faf5e2057376552e412bac91a/iStock-1167494109.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000",
       link: "#",
     },
   ];
@@ -80,7 +80,7 @@ const Project = () => {
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">
             Our Projects
           </h1>
-          <p className="text-2xl text-gray-300">
+          <p className="text-2xl text-gray-300 ">
             Discover some of the amazing projects we've worked on.
           </p>
         </motion.div>
@@ -111,7 +111,7 @@ const Project = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300"
+                className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 cursor-not-allowed transition-colors duration-300"
               >
                 View Project
               </motion.button>

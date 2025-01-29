@@ -95,7 +95,7 @@ const Hero = () => {
               onClick={() => handleScroll("projects")}
               className="flex items-center justify-center gap-3 px-6 py-3 rounded-full border-2 border-[#A100FF] 
                        text-sm md:text-base text-stone-300 font-bold hover:bg-[hsl(278,100%,30%)] 
-                       hover:text-white transition-all duration-300 hover:scale-105 active:scale-95"
+                       hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
             >
               <BsHandbagFill className="text-base md:text-lg" />
               <span>View Works</span>
@@ -108,7 +108,7 @@ const Hero = () => {
               className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full
                        bg-gradient-to-r from-transparent via-purple-700 to-purple-800
                        text-white font-medium transition-all duration-300
-                       hover:shadow-[0_0_20px_rgba(168,85,247,0.5)]"
+                       hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] cursor-pointer"
             >
               <span>Contact Us</span>
               <FiArrowRightCircle className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
