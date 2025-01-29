@@ -114,7 +114,7 @@ const Hero = () => {
 
             {/* Laptop Image area  */}
 
-            <div className="xl:w-full lg:w-[50%] lg:m-auto flex justify-center items-center xl:mt-0 lg:mt-1 md:mt-10 mt-20 ">
+            <div className="xl:w-full lg:w-[50%] lg:m-auto md:w-[40%] md:m-auto flex justify-center items-center xl:mt-0 lg:mt-1 md:mt-10 mt-20 ">
               <div className="w-[900px] ">
                 <img src={laptopImg} alt="laptop" />
               </div>
