@@ -79,7 +79,7 @@ const Hero = () => {
             className="text-center px-4 mt-8 md:mt-12"
           >
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white">
-              THE <span className="text-fuchsia-800 font-medium">ALPHAWIZZARDS</span>
+              THE <span className="text-fuchsia-800 font-medium">ALPHAWIZARDS</span>
             </h1>
           </motion.div>
 
