@@ -164,9 +164,9 @@ const OurTeam = () => {
       title: "Business Analyst",
       role: "Frontend Developer",
       image: umayangaImg,
-      github: "https://github.com/Maalgamage~",
+      github: "http://github.com/maleeshagamage",
       linkedin: "http://www.linkedin.com/in/umayanga-gamage-62ba05260",
-      portfolio: "#",
+      portfolio: "https://maalsworkspace.netlify.app/",
       bio: "Enthusiastic MIS UG at KIU University and BIT UG at the University of Moratuwa. Skilled in Business Analysis, UI/UX design, and Conducting Machine Learning researches. Experienced in analyzing requirements, crafting user-focused designs, and delivering top-notch project documentation. A dedicated learner and professional announcer passionate about driving IT solutions and innovation",
     },
     //sameera
